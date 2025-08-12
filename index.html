@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sunshine Educoarse</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff);
+        }
+
+        .logo {
+            margin-bottom: 40px;
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 5px;
+        }
+
+        .logo-text .s { color: #8fbc8f; }
+        .logo-text .sun { color: #ffd700; font-size: 20px; margin: 0 5px; }
+        .logo-text .e { color: #ff6b6b; }
+        .logo-text .c { color: #4d96ff; }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .phone-mockup {
+            width: 280px;
+            height: 560px;
+            background: #000;
+            border-radius: 35px;
+            margin: 40px auto;
+            padding: 12px;
+            position: relative;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: #f0f0f0;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .phone-image {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #e0e0e0, #f5f5f5);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .person-icon {
+            width: 80px;
+            height: 80px;
+            background: #666;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .person-icon::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            background: #333;
+            border-radius: 50%;
+        }
+
+        .person-icon::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 30px;
+            background: #333;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .laptop-icon {
+            width: 60px;
+            height: 40px;
+            background: #333;
+            border-radius: 4px 4px 8px 8px;
+            position: relative;
+        }
+
+        .laptop-icon::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: #555;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .contact-title {
+            font-size: 48px;
+            font-weight: 300;
+            color: #333;
+            margin: 40px 0 30px 0;
+            letter-spacing: 3px;
+        }
+
+        .contact-info {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #f8f9fa;
+            transform: translateX(5px);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+            color: #666;
+            flex-shrink: 0;
+        }
+
+        .contact-text {
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .contact-text a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            color: #4d96ff;
+        }
+
+        .website-placeholder {
+            height: 24px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            margin-left: 44px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .logo-text {
+                font-size: 36px;
+                letter-spacing: 6px;
+            }
+
+            .phone-mockup {
+                width: 220px;
+                height: 440px;
+                margin: 30px auto;
+            }
+
+            .contact-title {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+
+            .contact-text {
+                font-size: 14px;
+            }
+
+            .person-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .laptop-icon {
+                width: 45px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 28px;
+                letter-spacing: 4px;
+            }
+
+            .phone-mockup {
+                width: 180px;
+                height: 360px;
+            }
+
+            .contact-title {
+                font-size: 28px;
+                letter-spacing: 1px;
+            }
+
+            .contact-item {
+                padding: 12px 0;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-icon {
+                margin-bottom: 5px;
+                margin-right: 0;
+            }
+
+            .website-placeholder {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logo-text">
+                <span class="s">S</span><span class="sun">☀</span>
+                <span class="e">E</span><span class="c">C</span>
+            </div>
+            <div class="subtitle">Sunshine Educoarse</div>
+        </div>
+
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <div class="phone-image">
+                    <div class="person-icon"></div>
+                    <div class="laptop-icon"></div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="contact-title">CONTACT<br>US</h1>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                <div class="contact-text">
+                    <a href="tel:+628820074545185">0882 0074 54185</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+                <div class="contact-text">
+                    <a href="mailto:sunshineeducourse@gmail.com">sunshineeducourse@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.559-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.559.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/>
+                </svg>
+                <div class="website-placeholder"></div>
+            </div>
+
+            <div class="contact-item">
+                <svg class="contact-icon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                <div class="contact-text">
+                    Jl. Palopo No 37, Tegal Selatan,<br>Kota Tegal
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
